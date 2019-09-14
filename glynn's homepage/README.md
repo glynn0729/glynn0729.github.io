@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <tittle>Glynn's homepage</tittle>
+    <tittle></tittle>
 </head>
 <body>
     <h1>Glynn's Homepage</h1>
