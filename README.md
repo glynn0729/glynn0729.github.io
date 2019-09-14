@@ -1,5 +1,3 @@
-# glynn0729.github.io
-glynn0729 page
 <!DOCTYPE html>
 <head>
     <tittle>Glynn's homepage</tittle>
