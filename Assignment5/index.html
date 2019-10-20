@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+ <html>  
+      <head>  
+           <title>Vegan's choice in HK | Show JSON Data in Jquery Datatables</title>  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+           <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/>  
+           <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>  
+      </head>  
+      <style>
+      .button {
+
+  background-color: #CD5C5C; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+      </style>
+      <body>  
+           <br /><br />  
+           <div class="container">  
+                <h1 align="center">Vegan's choice in HK Database</h3><br />  
+                <h3 align="center">Detailed Data</h3><br />  
+                <button id="myButton1" class="button" >Go to Rolled Up View</button>
+              
+                <table id="data-table" class="table table-bordered">  
+                     <thead>  
+                          <tr>  
+                               <th>Vegan's choice</th>  
+                               <th>Picture</th>  
+                               <th>Category</th>  
+                               <th>Type</th>  
+                               <th>Top choice</th>  
+                               <th>Payment</th>  
+                               <th>Expense</th>  
+                               <th>Opening Hours</th>  
+                               <th>District</th>  
+                               <th>Location</th>  
+                               <th>Transportation</th>  
+                               <th>Homepage on openrice</th>  
+                               <th>Contact</th>  
+                               <th>Surrounddings</th>  
+                          </tr>  
+                     </thead>  
+                </table>  
+           </div>  
+      </body>  
+ </html>  
+ <script>  
+ $(document).ready(function(){  
+      $('#data-table').DataTable({  
+           "ajax"     :     "Detailed_Data.json",  
+           "columns"     :     [  
+                {     "data"     :     "Name"     },  
+                {     "data"     :     "Picture"},  
+                {     "data"     :     "Category"},
+                {     "data"     :     "Type"     },  
+                {     "data"     :     "Top choice"},  
+                {     "data"     :     "Payment"},
+                {     "data"     :     "Expense"     },  
+                {     "data"     :     "Opening Hours"},  
+                {     "data"     :     "District"},
+                {     "data"     :     "Location"     },  
+                {     "data"     :     "Transportation"},  
+                {     "data"     :     "Homepage on openrice"},
+                {     "data"     :     "Contact"     },  
+                {     "data"     :     "Surrounddings"},  
+           ]  
+      });  
+ });  
+
+
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "Rolled_Up_Views.html";
+    };
+ 
+ </script>  
