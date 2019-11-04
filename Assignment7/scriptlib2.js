@@ -15,6 +15,7 @@ $(document).ready(function(){
         $x.empty();
     });
 
+
     $("button#get_data").click(function() {
         var items = [];
         var i = 0;
@@ -41,6 +42,8 @@ $(document).ready(function(){
                        console.log(items);
                 }); // end .each
                 console.log(dataSet);
+
+
 
              $('#table1').DataTable( {
                  data: dataSet,
