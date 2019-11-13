@@ -898,6 +898,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #facts .facts-img {
   text-align: center;
   padding-top: 30px;
+  
 }
 
 /* Portfolio Section
@@ -1093,11 +1094,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #testimonials {
-  padding: 60px 0;
+  padding: 0px 0;
+
 }
 
+
+
+
 #testimonials .section-header {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 #testimonials .testimonial-item {

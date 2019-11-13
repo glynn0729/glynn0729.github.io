@@ -28,19 +28,10 @@
         BizPage Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
         Author: BootstrapMade.com License: https://bootstrapmade.com/license/=======================================================-
         ->
-
 </head>
-
-
-
 <body>
-
-
-
   <!--==========================
-
     Header
-
   ============================-->
     </head>
     
@@ -48,9 +39,8 @@
         <header id="header">
             <div class="container-fluid">
                 <div id="logo" class="pull-left">
-                    <h1 class="text-success">Vegan in HK</h1>
-                    <!-- Uncomment below if you prefer to use an image logo
-                    -->
+                    <a href="index.html"><h1 class="text-success">Vegan in HK</h1></a>
+                    <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
                 </div>
                 <nav id="nav-menu-container">
@@ -76,7 +66,7 @@
             </div>
         </header>
         <!-- #header -->
-        <!--==========================I ntro Section============================-->
+        <!--==========================首页左右滑动介绍============================-->
         <section id="intro">
             <div class="intro-container">
                 <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
@@ -84,7 +74,7 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div class="carousel-background">
-                                <img src="img/intro-carousel/1.jpg" alt="">
+                                <img alt="" src="img/homepage/homepage1.jpg">
                             </div>
                             <div class="carousel-container">
                                 <div class="carousel-content">
@@ -96,7 +86,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="carousel-background">
-                                <img src="img/intro-carousel/2.jpg" alt="">
+                                <img src="img/homepage/homepage2.jpg" alt="">
                             </div>
                             <div class="carousel-container">
                                 <div class="carousel-content">
@@ -108,7 +98,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="carousel-background">
-                                <img src="img/intro-carousel/3.jpg" alt="">
+                                <img src="img/homepage/homepage3.jpg" alt="">
                             </div>
                             <div class="carousel-container">
                                 <div class="carousel-content">
@@ -120,7 +110,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="carousel-background">
-                                <img src="img/intro-carousel/4.jpg" alt="">
+                                <img src="img/homepage/homepage4.jpg" alt="">
                             </div>
                             <div class="carousel-container">
                                 <div class="carousel-content">
@@ -148,7 +138,7 @@
                 </div>
             </div>
         </section>
-        <!-- #intro -->
+        <!-- #左右滑动介绍 -->
         <main id="main">
             <!--==========================素食概况============================-->
             <p id="overview"></p>
@@ -178,66 +168,127 @@
             <!-- #素食概况 -->
             <!--==========================素食餐厅============================-->
             <p id="restaurants"></p>
-            <section id="about">
+            <section id="portfolio" class="section-bg">
                 <div class="container">
                     <header class="section-header">
-                        <h3>精选素食餐厅</h3>
-                        <p>根据就餐场景/料理类别，挑选心水的素食餐厅。</p>
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <a class="active btn btn-success">就餐场景</a>
-                                <a class="active btn btn-default" href="index_res_cuisine.html#restaurants">料理类别</a>
-                            </div>
-                        </div>
-                        <br>
+                        <h3>素食餐厅</h3>
+                        <p>点击就餐场景/料理类别进行分类筛选，挑选心水的素食餐厅。</p>
                     </header>
-                    <div class="row about-cols">
-                        <div class="col-md-4 wow fadeInUp">
-                            <div class="about-col">
-                                <div class="img">
-                                    <img src="img/about-mission.jpg" alt="" class="img-fluid">
-                                    <div class="icon">
-                                        <i class="ion-ios-speedometer-outline"></i>
-                                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul id="portfolio-flters">
+                                <li data-filter="*" class="filter-active">所有专题</li>
+                                <li data-filter=".filter-app">就餐场景</li>
+                                <li data-filter=".filter-card">料理类别</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row portfolio-container">
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/homepage/homepage_city.png" class="img-fluid" alt="">
+                                    <a href="img/portfolio/app1.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="App 1"><i class="ion ion-eye"></i></a>
+                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                </figure>
+                                <div class="portfolio-info" draggable="true">
+                                    <h4>
+                                        <a href="res_city.html">都市</a>
+                                    </h4>
+                                    <p>在繁华商圈寻找精致素食餐厅。
+                                        <br>
+                                    </p>
                                 </div>
-                                <h2 class="title">
-                                    <a href="#">都市</a>
-                                </h2>
-                                <p>在热门商圈享用素食。</p>
                             </div>
                         </div>
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="about-col">
-                                <div class="img">
-                                    <img src="img/about-plan.jpg" alt="" class="img-fluid">
-                                    <div class="icon">
-                                        <i class="ion-ios-list-outline"></i>
-                                    </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                        data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/homepage/homepage_island.png" class="img-fluid" alt="">
+                                    <a href="img/portfolio/app2.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="App 2"><i class="ion ion-eye"></i></a>
+                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                </figure>
+                                <div class="portfolio-info">
+                                    <h4>
+                                        <a href="#">海岛</a>
+                                    </h4>
+                                    <p>在南丫岛体验蔚海景与新鲜素食。</p>
                                 </div>
-                                <h2 class="title">
-                                    <a href="#">海岛</a>
-                                </h2>
-                                <p>在海边享用素食。</p>
                             </div>
                         </div>
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="about-col">
-                                <div class="img">
-                                    <img src="img/about-vision.jpg" alt="" class="img-fluid">
-                                    <div class="icon">
-                                        <i class="ion-ios-eye-outline"></i>
-                                    </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                        data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/homepage/homepage_tempel.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/app3.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="App 3"><i class="ion ion-eye"></i></a>
+                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                </figure>
+                                <div class="portfolio-info">
+                                    <h4>
+                                        <a href="#">禅寺</a>
+                                    </h4>
+                                    <p>在静谧禅寺享用斋饭。</p>
                                 </div>
-                                <h2 class="title">
-                                    <a href="#">禅寺</a>
-                                </h2>
-                                <p>在禅寺体验斋饭。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/homepage/homepage_chinese.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/card2.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="Card 2"><i class="ion ion-eye"></i></a>
+                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                </figure>
+                                <div class="portfolio-info">
+                                    <h4>
+                                        <a href="#">中餐厅</a>
+                                    </h4>
+                                    <p>搜寻好吃的中式素食料理。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/homepage/homepage_foreign.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/card1.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="Card 1"><i class="ion ion-eye"></i></a>
+                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                </figure>
+                                <div class="portfolio-info">
+                                    <h4>
+                                        <a href="#">多国菜</a>
+                                    </h4>
+                                    <p>探索来自异域的素食文化。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
+                        data-wow-delay="0.1s">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/homepage/hoempage_dessert.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/card3.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="Card 3"><i class="ion ion-eye"></i></a>
+                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                </figure>
+                                <div class="portfolio-info">
+                                    <h4>
+                                        <a href="#">素食甜品</a>
+                                    </h4>
+                                    <p>品尝不含蛋奶的素食甜品。</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- #about -->
+            <!-- #素食餐厅 -->
             <!--==========================在家做菜============================-->
             <p id="make_at_home"></p>
             <section id="about">
@@ -250,25 +301,25 @@
                         <div class="col-md-6 wow fadeInUp">
                             <div class="about-col">
                                 <div class="img">
-                                    <img src="img/about-mission.jpg" alt="" class="img-fluid">
-                                    <div class="icon">
-                                        <i class="ion-ios-speedometer-outline"></i>
-                                    </div>
+                                    <img src="img/homepage/homepage_tutorial.jpg" alt="" class="img-fluid">
+                                    <a herf="" href="make_dish_recipes.html"><div class="icon">
+                    <i class="ion-ios-speedometer-outline"></i>
+                  </div></a>
                                 </div>
-                                <h2 class="title">料理教学</h2>
-                                <p>在热门商圈享用素食。</p>
+                                <a herf="" href="make_dish_recipes.html"><h2 class="title">料理教学</h2></a>
+                                <p class="text-center">浏览教学视频并获取素食菜谱，在家也可以做出美味精致的餐食。</p>
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="about-col">
                                 <div class="img">
-                                    <img src="img/about-plan.jpg" alt="" class="img-fluid">
-                                    <div class="icon">
-                                        <i class="ion-ios-list-outline"></i>
-                                    </div>
+                                    <img src="img/homepage/homepage_street_mkt.jpg" alt="" class="img-fluid">
+                                    <a href="make_dish_mkt.html"><div class="icon">
+                    <i class="ion-ios-list-outline"></i>
+                    </div></a>
                                 </div>
-                                <h2 class="title">原料购买</h2>
-                                <p>在海边享用素食。</p>
+                                <a href="make_dish_mkt.html"><h2 class="title">原料购买</h2></a>
+                                <p class="text-center">浏览精选香港本地街市以及超级市场，了解可以购买新鲜蔬果的地址。</p>
                             </div>
                         </div>
                     </div>
@@ -296,9 +347,9 @@
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
                             <div class="portfolio-wrap">
                                 <figure>
-                                    <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
-                                    <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1"
-                                    class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                                    <img src="img/homepage/homepage_pork.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/app1.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="App 1"><i class="ion ion-eye"></i></a>
                                     <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                                 </figure>
                                 <div class="portfolio-info">
@@ -313,14 +364,14 @@
                         data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
                                 <figure>
-                                    <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
-                                    <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio"
-                                    data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                    <img src="img/homepage/homepage_toufu.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/app2.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="App 2"><i class="ion ion-eye"></i></a>
                                     <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                                 </figure>
                                 <div class="portfolio-info">
                                     <h4>
-                                        <a href="#">新品推荐</a>
+                                        <a href="#">豆腐汉堡</a>
                                     </h4>
                                     <p>新品推荐</p>
                                 </div>
@@ -330,14 +381,14 @@
                         data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
                                 <figure>
-                                    <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
-                                    <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio"
-                                    data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                    <img src="img/homepage/homepage_starbucks.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/app3.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="App 3"><i class="ion ion-eye"></i></a>
                                     <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                                 </figure>
                                 <div class="portfolio-info">
                                     <h4>
-                                        <a href="#">新品推荐</a>
+                                        <a href="#">Starbucks 全素三文治</a>
                                     </h4>
                                     <p>新品推荐</p>
                                 </div>
@@ -346,30 +397,30 @@
                         <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
                             <div class="portfolio-wrap">
                                 <figure>
-                                    <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
-                                    <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio"
-                                    data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                    <img src="img/homepage/homepage_event1.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/card2.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="Card 2"><i class="ion ion-eye"></i></a>
                                     <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                                 </figure>
                                 <div class="portfolio-info">
                                     <h4>
-                                        <a href="#">新品推荐</a>
+                                        <a href="http://www.vegfest.hk/index.php">第七届香港素食嘉年华</a>
                                     </h4>
-                                    <p>新品推荐</p>
+                                    <p>本地活动</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
                             <div class="portfolio-wrap">
                                 <figure>
-                                    <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
-                                    <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio"
-                                    data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                                    <img src="img/homepage/homepage_event2.jpg" class="img-fluid" alt="">
+                                    <a href="img/portfolio/card1.jpg" class="link-preview" title="Preview"
+                                    data-lightbox="portfolio" data-title="Card 1"><i class="ion ion-eye"></i></a>
                                     <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                                 </figure>
                                 <div class="portfolio-info">
                                     <h4>
-                                        <a href="#">本地活动</a>
+                                        <a href="#">第六届亚洲素食展</a>
                                     </h4>
                                     <p>本地活动</p>
                                 </div>
@@ -379,14 +430,14 @@
                         data-wow-delay="0.1s">
                             <div class="portfolio-wrap">
                                 <figure>
-                                    <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+                                    <img src="img/homepage/homepage_event3.jpg" class="img-fluid" alt="">
                                     <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio"
                                     data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
                                     <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                                 </figure>
                                 <div class="portfolio-info">
                                     <h4>
-                                        <a href="#">本地活动</a>
+                                        <a href="#">6.15健康素食日</a>
                                     </h4>
                                     <p>本地活动</p>
                                 </div>
@@ -396,20 +447,19 @@
                 </div>
             </section>
             <!-- #素食资讯 -->
-            <!--==========================C ontact Section============================-->
+            <!--==========================联系我们============================-->
             <section id="contact" class="section-bg wow fadeInUp">
                 <div class="container">
                     <div class="section-header">
                         <h3>联系我们</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                            doloremque</p>
+                        <p>您可以通过以下方式联系我们，或在表格中填写您的宝贵意见。</p>
                     </div>
                     <div class="row contact-info">
                         <div class="col-md-4">
                             <div class="contact-address">
                                 <i class="ion-ios-location-outline"></i>
                                 <h3>地址</h3>
-                                <address>A108 Adam Street, NY 535022, USA</address>
+                                <address>中華人民共和國 香港特別行政區 新界沙田 香港中文大學</address>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -417,7 +467,7 @@
                                 <i class="ion-ios-telephone-outline"></i>
                                 <h3>联系方式</h3>
                                 <p>
-                                    <a href="tel:+155895548855">+1 5589 55488 55</a>
+                                    <a href="tel:+155895548855">+51910645</a>
                                 </p>
                             </div>
                         </div>
@@ -426,7 +476,7 @@
                                 <i class="ion-ios-email-outline"></i>
                                 <h3>电子邮箱</h3>
                                 <p>
-                                    <a href="mailto:info@example.com">info@example.com</a>
+                                    <a href="mailto:info@example.com">GlynnLu@163.com</a>
                                 </p>
                             </div>
                         </div>
@@ -464,9 +514,8 @@
                     </div>
                 </div>
             </section>
-            <!-- #contact -->
+            <!-- #联系我们 -->
         </main>
-        <div class="section"></div>
         <!--==========================F ooter============================-->
         <footer id="footer">
             <div class="footer-top">
@@ -474,10 +523,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 footer-info">
                             <h2 contenteditable="true" class="text-success">Vegan in HK</h2>
-                            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra
-                                videa magna derita valies darta donna mare fermentum iaculis eu non diam
-                                phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat
-                                consequat mauris nunc congue.</p>
+                            <p contenteditable="true">Vegan in HK 致力于为素食者提供香港找食指南，希望每个素食者的饮食生活可以变得更加健康精彩。</p>
                         </div>
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>导航</h4>
@@ -506,18 +552,13 @@
                         </div>
                         <div class="col-lg-3 col-md-6 footer-contact">
                             <h4>联系我们</h4>
-                            <p>A108 Adam Street
-                                <br>New York, NY 535022
-                                <br>United States
-                                <br>
-                                <strong>Phone:</strong>+1 5589 55488 55
-                                <br>
-                                <strong>Email:</strong>info@example.com
-                                <br>
-                            </p>
+                            <strong>Phone:</strong>+852 51910645
+                            <br>
+                            <strong>Email:</strong>GlynnLu@163.com
+                            <br>
+                            <p></p>
                             <div class="social-links">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/GlynnLu" class="facebook"><i class="fa fa-facebook"></i></a>
                             </div>
                         </div>
                     </div>
