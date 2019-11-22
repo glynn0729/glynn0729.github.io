@@ -29,7 +29,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
         <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
-</script>
+        </script>
+       <!-- JS chart -->
+       <script src="https://www.amcharts.com/lib/4/core.js"></script>
+       <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
         <!--=======================================================T
         heme Name: BizPage Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
         Author: BootstrapMade.com License: https://bootstrapmade.com/license/=======================================================-
@@ -39,6 +43,13 @@
   <!--==========================
     Header
   ============================-->
+  <style>
+    #chartdiv {
+      width: 100%;
+      height: 250px;
+    }
+    
+    </style>
     </head>
     
     <body>
@@ -61,10 +72,10 @@
                             <a href="index.html#make_at_home">在家做菜</a>
                         </li>
                         <li>
-                            <a href="#index.htmlvegan_news">素食资讯</a>
+                            <a href="index.html#vegan_news">素食资讯</a>
                         </li>
                         <li>
-                            <a href="#index.htmlcontact">联系我们</a>
+                            <a href="index.html#contact">联系我们</a>
                         </li>
                     </ul>
                 </nav>
@@ -84,8 +95,13 @@
                     <div class="container">
                         <header class="section-header">
                             <h3>纯素商品购买 · 鲜活街市</h3>
-                            <p>点击新界/九龙进行地区筛选，浏览视频挑选全港最有设计感的鲜活街市。</p>
+                            <p>图表为您提供九个特色街市内商铺数量的近似值。
+                            您亦可点击新界/九龙进行地区筛选，浏览视频挑选期望前往的地点。</p>
                         </header>
+
+                       
+                        
+                        <div style="background-color: rgba(255, 255, 255, 0.616);"id="chartdiv"></div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <ul id="portfolio-flters">
@@ -147,30 +163,30 @@
                             <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
                                 <div class="portfolio-wrap">
                                     <figure>
-                                        <iframe width="340" height="240" src="https://www.youtube.com/embed/gHhRSuyD24A"
+                                        <iframe width="340" height="240" src="https://www.youtube.com/embed/8PwdDgsPlkw"
                                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen="" alt=""></iframe>
                                     </figure>
                                     <div class="portfolio-info">
                                         <h4>
-                                            <a href="#">香港街市(順天)</a>
+                                            <a href="#">啟田市場</a>
                                         </h4>
-                                        <p>觀塘區順天邨天璣樓地下4號舖</p>
+                                        <p>觀塘藍田啟田道50號啟田商場地下</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
                                 <div class="portfolio-wrap">
                                     <figure>
-                                        <iframe width="340" height="240" src="https://www.youtube.com/embed/pP4Bl8-V5ms"
+                                        <iframe width="340" height="240" src="https://www.youtube.com/embed/V9Q3IQDf1AI"
                                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen="" alt=""></iframe>
                                     </figure>
                                     <div class="portfolio-info">
                                         <h4>
-                                            <a href="#">香港街市 (大角咀)</a>
+                                            <a href="#">寶林市場</a>
                                         </h4>
-                                        <p>大角咀道107-127號大同新邨大公樓地下1號舖</p>
+                                        <p>將軍澳寶琳北路18號</p>
                                     </div>
                                 </div>
                             </div>
@@ -194,15 +210,15 @@
                             data-wow-delay="0.2s">
                                 <div class="portfolio-wrap">
                                     <figure>
-                                        <iframe width="340" height="240" src="https://www.youtube.com/embed/wsEeOyoFhFY"
+                                        <iframe width="340" height="240" src="https://www.youtube.com/embed/tJ51UedZ7pI"
                                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen="" alt=""></iframe>
                                     </figure>
                                     <div class="portfolio-info">
                                         <h4>
-                                            <a href="#">香港街市 – 逸東邨</a>
+                                            <a href="#">廣源市場</a>
                                         </h4>
-                                        <p>東涌逸東街8號逸東商場地下</p>
+                                        <p>沙田小瀝源路68號廣源邨廣源商場地下</p>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +278,7 @@
                 </section>
             </div>
         </section>
-        <!--==========================F ooter============================-->
+        <!--==========================Footer============================-->
         <footer id="footer">
             <div class="footer-top">
                 <div class="container">
@@ -326,43 +342,100 @@
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         <!-- Uncomment below i you want to use a preloader -->
         <!-- <div id="preloader"></div> -->
-        <!---------------------- map ---------------------->
+
+        <!---------------------- Bar chart ---------------------->
         <script>
-            var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
-                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                    var map = L.map('map')
-                                                                                                                                                                                                                                                                                                          .addLayer(mapboxTiles)
-                                                                                                                                                                                                                                                                                                          .setView([22.296417, 114.170097], 11);
-                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                    var items = [];
-                                                                                                                                                                                                                                                                                                    var airtable_read_endpoint = "https://api.airtable.com/v0/appfV5TWWBtgUBxTb/GeoPosition_Part?api_key=keymLj031WF0srBPP";
-                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                    var data = [];
-                                                                                                                                                                                                                                                                                                    $.getJSON(airtable_read_endpoint, function(result) {
-                                                                                                                                                                                                                                                                                                           $.each(result.records, function(key,value) {
-                                                                                                                                                                                                                                                                                                               items = {};
-                                                                                                                                                                                                                                                                                                                   items["name"] = value.fields.Name;
-                                                                                                                                                                                                                                                                                                                   items["url"] = value.fields.URL;
-                                                                                                                                                                                                                                                                                                                   items["img_url"] = value.fields.Pic_URL;
-                                                                                                                                                                                                                                                                                                                   items["latitud"] = value.fields.Lat;
-                                                                                                                                                                                                                                                                                                                   items["longitud"] = value.fields.Lng;
-                                                                                                                                                                                                                                                                                                                   data.push(items);
-                                                                                                                                                                                                                                                                                                                   console.log(items);
-                                                                                                                                                                                                                                                                                                            }); // end .each
-                                                                                                                                                                                                                                                                                                    }); // end getJSON
-        </script>
-        <script>
-            function show_districts(){
-                                                                                                                                                                                                                                                                                            for (var i in data) {
-                                                                                                                                                                                                                                                                                              var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
-                                                                                                                                                                                                                                                                                              L.marker( latlng )
-                                                                                                                                                                                                                                                                                                  .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].img_url+'" width = "80px"><br>'+data[i].name + '</a>' )
-                                                                                                                                                                                                                                                                                                  .addTo(map);
-                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                            }
-        </script>
-        <!---------------------- #map JS---------------------->
+           
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv", am4charts.XYChart);
+chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+chart.data = [
+  {
+    country: "竹園市場",
+    visits: 90
+  },
+  {
+    country: "啟田市場",
+    visits: 90
+  },  
+  {
+    country: "沙角市场",
+    visits: 80
+  },
+  {
+    country: "T Market",
+    visits: 70
+  },
+  {
+    country: "慈雲山市場",
+    visits: 60
+  },
+  {
+    country: "廣源市場",
+    visits: 60
+  },
+  {
+    country: "明华市场",
+    visits: 50
+  },
+  {
+    country: "M.C. BOX 寶達市場",
+    visits: 50
+  },
+  {
+    country: "寶林市場",
+    visits: 50
+  },
+];
+
+chart.options={
+       scales: {
+              xAxes: [{gridLines: { color: "#131c2b" }}],
+              yAxes: [{gridLines: { color: "#131c2b" }}]
+              }
+    };
+
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.dataFields.category = "country";
+categoryAxis.renderer.minGridDistance = 40;
+categoryAxis.fontSize = 11;
+categoryAxis.renderer.labels.template.dy = 5;
+
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.min = 0;
+valueAxis.renderer.minGridDistance = 30;
+valueAxis.renderer.baseGrid.disabled = true;
+
+
+var series = chart.series.push(new am4charts.ColumnSeries());
+series.dataFields.categoryX = "country";
+series.dataFields.valueY = "visits";
+series.columns.template.tooltipText = "{valueY.value}";
+series.columns.template.tooltipY = 0;
+series.columns.template.strokeOpacity = 0;
+
+// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+series.columns.template.adapter.add("fill", function(fill, target) {
+  return chart.colors.getIndex(target.dataItem.index);
+});
+
+}); // end am4core.ready()
+</script>
+
+        
+           
+        <!----------------------#Bar chart JS------------------->
+
+
+
         <!-- JavaScript Libraries -->
         <script src="lib/jquery/jquery.min.js"></script>
         <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -381,6 +454,8 @@
         <script src="contactform/contactform.js"></script>
         <!-- Template Main Javascript File -->
         <script src="js/main.js"></script>
+         
+        
     </body>
 
 </html>
