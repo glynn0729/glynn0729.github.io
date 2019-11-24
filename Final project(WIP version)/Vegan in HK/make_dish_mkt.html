@@ -30,28 +30,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
         <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
         </script>
-       <!-- JS chart -->
-       <script src="https://www.amcharts.com/lib/4/core.js"></script>
-       <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+       <!-- barchart lib -->
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+       <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css"
+       rel="stylesheet" type="text/css">
+
         <!--=======================================================T
         heme Name: BizPage Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
         Author: BootstrapMade.com License: https://bootstrapmade.com/license/=======================================================-
         ->
 </head>
 <body>
-  <!--==========================
-    Header
-  ============================-->
-  <style>
-    #chartdiv {
-      width: 100%;
-      height: 250px;
-    }
-    
-    </style>
+  <!=========================== Header============================-->
     </head>
-    
     <body>
         <header id="header">
             <div class="container-fluid">
@@ -95,22 +89,15 @@
                     <div class="container">
                         <header class="section-header">
                             <h3>纯素商品购买 · 鲜活街市</h3>
-                            <p>图表为您提供九个特色街市内商铺数量的近似值。
-                            您亦可点击新界/九龙进行地区筛选，浏览视频挑选期望前往的地点。</p>
+                            <p>为您精选推荐九个特色街市，您可以点击“查看对比”，了解街市内商铺的数量，亦可以直接浏览介绍视频，挑选希望前往的街市。</p>
                         </header>
-                        <button type="button" class="btn btn-success" id="get_data2">Bar Chart</button>
-                        <div id="chart">ccs</div>
-    
-                        <div style="background-color: rgba(255, 255, 255, 0.616);"id="chartdiv"></div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <ul id="portfolio-flters">
-                                    <li data-filter="*" class="filter-active">所有地区</li>
-                                    <li data-filter=".filter-app">新界</li>
-                                    <li data-filter=".filter-card">九龙</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <button type="button" class="btn btn-success" id="get_data2">查看对比</button>
+                        <br>
+                        <br>
+                        <div style="background-color: rgba(255, 255, 255, 0.616); position: relative;" id="chart"></div>
+
+                        <br>
+                        <br>
                         <div class="row portfolio-container">
                             <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
                             data-wow-delay="0.2s">
@@ -361,8 +348,6 @@
                 }); // end .each
                 console.log(dataSet);
   
-            
-  
            var chart = c3.generate({
                 data: {
                     columns: dataSet,
@@ -370,10 +355,7 @@
                 },
                 axis: {
                   x: {label: '街市名称'},
-                  y: {label: '商铺数量'}
-                },
-                bar: {
-                    title: "# of Items by Product Category:",
+                  y: {label: '街市内商铺数量'}
                 },
                 color: {
                   pattern: ['#FADBD8', '#aec7e8', '#F9E79F', '#FEA998', '#E9CBEE', '#98df8a', '#6DDDE1', '#9189AB', '#A35238', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f']
@@ -385,101 +367,9 @@
    }); // end button
 });
 
-
 </script>
-
-
-        <script>
-          
-am4core.ready(function() {
-
-// Themes begin
-am4core.useTheme(am4themes_animated);
-// Themes end
-
-var chart = am4core.create("chartdiv", am4charts.XYChart);
-chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-
-chart.data = [
-  {
-    country: "竹園市場",
-    visits: 90
-  },
-  {
-    country: "啟田市場",
-    visits: 90
-  },  
-  {
-    country: "沙角市场",
-    visits: 80
-  },
-  {
-    country: "T Market",
-    visits: 70
-  },
-  {
-    country: "慈雲山市場",
-    visits: 60
-  },
-  {
-    country: "廣源市場",
-    visits: 60
-  },
-  {
-    country: "明华市场",
-    visits: 50
-  },
-  {
-    country: "M.C. BOX 寶達市場",
-    visits: 50
-  },
-  {
-    country: "寶林市場",
-    visits: 50
-  },
-];
-
-chart.options={
-       scales: {
-              xAxes: [{gridLines: { color: "#131c2b" }}],
-              yAxes: [{gridLines: { color: "#131c2b" }}]
-              }
-    };
-
-var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-categoryAxis.renderer.grid.template.location = 0;
-categoryAxis.dataFields.category = "country";
-categoryAxis.renderer.minGridDistance = 40;
-categoryAxis.fontSize = 11;
-categoryAxis.renderer.labels.template.dy = 5;
-
-
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-valueAxis.min = 0;
-valueAxis.renderer.minGridDistance = 30;
-valueAxis.renderer.baseGrid.disabled = true;
-
-
-var series = chart.series.push(new am4charts.ColumnSeries());
-series.dataFields.categoryX = "country";
-series.dataFields.valueY = "visits";
-series.columns.template.tooltipText = "{valueY.value}";
-series.columns.template.tooltipY = 0;
-series.columns.template.strokeOpacity = 0;
-
-// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
-series.columns.template.adapter.add("fill", function(fill, target) {
-  return chart.colors.getIndex(target.dataItem.index);
-});
-
-}); // end am4core.ready()
-</script>
-
-        
-           
+ 
         <!----------------------#Bar chart JS------------------->
-
-
 
         <!-- JavaScript Libraries -->
         <script src="lib/jquery/jquery.min.js"></script>
@@ -499,9 +389,6 @@ series.columns.template.adapter.add("fill", function(fill, target) {
         <script src="contactform/contactform.js"></script>
         <!-- Template Main Javascript File -->
         <script src="js/main.js"></script>
-        <!-- Barchart Javascript File -->
-        <script src="bar_chart.js"></script>
-        
     </body>
 
 </html>
