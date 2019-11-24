@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>GetJSON</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
+</script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css"
+        rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #map {
+                          height: 100%;
+                        }
+        </style>
+    </head>
+    
+    <body>
+        <div class="cover">
+            <div class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" id="navbar-default">Vegan's choice in HK</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="#AirtableDetail">Airtable Detail</a>
+                            </li>
+                            <li>
+                                <a href="#get_data">GetJson Total</a>
+                            </li>
+                            <li>
+                                <a href="#get_data2">Bar Chart</a>
+                            </li>
+                            <li>
+                                <a href="#roll_up">Show Districts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-image"></div>
+        </div>
+        <div class="container" id="AirtableDetail">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <ul class="pagination"></ul>
+                    <h3 class="text-muted">Airtable Detail</h3>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p id="welcome" class="card-text"></p>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                    <div class="well">
+                        <p id="demo">
+                            <iframe class="airtable-embed" src="https://airtable.com/embed/shrn5kfNHVDvYZJYJ?backgroundColor=greenLight&amp;viewControls=on"
+                            frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                        </p>
+                    </div>
+                    <!-- Sign and date the page, it's only polite! -->
+                    <button type="button" class="btn btn-success" id="get_data">GetJson Total</button>
+                    <br>
+                    <div class="table-responsive">
+                        <table id="table1" width="100%" class="table table-bordered"></table>
+                    </div>
+                    <h3 class="text-muted"></h3>
+                    <!-- table responsive -->
+                    <button type="button" class="btn btn-success" id="get_data2">Bar Chart</button>
+                    <br>
+                    <div class="table-responsive">
+                        <table id="table2" width="100%" class="table table-bordered"></table>
+                    </div>
+                    <!-- table responsive -->
+                    <div id="chart"></div>
+                    <h3 class="text-muted">Map Using Leaflet</h3>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <button type="button" class="btn btn-success" id="roll_up" onclick="show_districts();">Show Districts</button>
+                            <br>
+                            <div id="map" style="width: 600px; height: 400px"></div>
+                        </div>
+                        <!-- column -->
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!--end row -->
+        </div>
+        <!-- container -->
+        <script>
+            var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
+                
+                    var map = L.map('map')
+                          .addLayer(mapboxTiles)
+                          .setView([22.296417, 114.170097], 13);
+                
+                
+                    var items = [];
+                    var airtable_read_endpoint = "https://api.airtable.com/v0/appfV5TWWBtgUBxTb/GeoPosition_Part?api_key=keymLj031WF0srBPP";
+                
+                    var data = [];
+                    $.getJSON(airtable_read_endpoint, function(result) {
+                           $.each(result.records, function(key,value) {
+                               items = {};
+                                   items["name"] = value.fields.Name;
+                                   items["url"] = value.fields.URL;
+                                   items["img_url"] = value.fields.Pic_Url;
+                                   items["latitud"] = value.fields.Lat;
+                                   items["longitud"] = value.fields.Lng;
+                                   data.push(items);
+                                   console.log(items);
+                            }); // end .each
+                    }); // end getJSON
+        </script>
+        <script>
+            function show_districts(){
+                
+                      for (var i in data) {
+                          var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+                          L.marker( latlng )
+                              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
+                              .addTo(map);
+                      }
+                    }
+        </script>
+        <script src="scriptlib2.js"></script>
+    </body>
+
+</html>
