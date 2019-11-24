@@ -98,9 +98,9 @@
                             <p>图表为您提供九个特色街市内商铺数量的近似值。
                             您亦可点击新界/九龙进行地区筛选，浏览视频挑选期望前往的地点。</p>
                         </header>
-
-                       
-                        
+                        <button type="button" class="btn btn-success" id="get_data2">Bar Chart</button>
+                        <div id="chart">ccs</div>
+    
                         <div style="background-color: rgba(255, 255, 255, 0.616);"id="chartdiv"></div>
                         <div class="row">
                             <div class="col-lg-12">
@@ -344,8 +344,53 @@
         <!-- <div id="preloader"></div> -->
 
         <!---------------------- Bar chart ---------------------->
+<script>
+    $(document).ready(function(){
+    $("button#get_data2").click(function() {
+        var items = [];
+        var i = 0;
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appk2UBgqcJgKL8qR/make_dish_street_mkt?api_key=keymLj031WF0srBPP";
+        var dataSet = [];
+        $.getJSON(airtable_read_endpoint, function(result) {
+               $.each(result.records, function(key,value) {
+                   items = [];
+                       items.push(value.fields.Street_Market);
+                       items.push(value.fields.Shops_Count);
+                       dataSet.push(items);
+                       console.log(items);
+                }); // end .each
+                console.log(dataSet);
+  
+            
+  
+           var chart = c3.generate({
+                data: {
+                    columns: dataSet,
+                    type : 'bar'
+                },
+                axis: {
+                  x: {label: '街市名称'},
+                  y: {label: '商铺数量'}
+                },
+                bar: {
+                    title: "# of Items by Product Category:",
+                },
+                color: {
+                  pattern: ['#FADBD8', '#aec7e8', '#F9E79F', '#FEA998', '#E9CBEE', '#98df8a', '#6DDDE1', '#9189AB', '#A35238', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f']
+              }
+            });
+
+      }); // end .getJSON
+
+   }); // end button
+});
+
+
+</script>
+
+
         <script>
-           
+          
 am4core.ready(function() {
 
 // Themes begin
@@ -454,7 +499,8 @@ series.columns.template.adapter.add("fill", function(fill, target) {
         <script src="contactform/contactform.js"></script>
         <!-- Template Main Javascript File -->
         <script src="js/main.js"></script>
-         
+        <!-- Barchart Javascript File -->
+        <script src="bar_chart.js"></script>
         
     </body>
 
