@@ -80,20 +80,27 @@
                     <div class="container">
                         <header class="section-header">
                             <h3>线下素食购买 · 公众街市</h3>
-                            <p>您可以根据所在辖区，在表格中查看离您最近的街市，亦可点击对比，挑选最适合素食者前往的十间街市。</p>
+                            <p>街市是香港本土文化的一部分，内设各式商铺，售卖新鲜粮食与日用品。不同街市的贩售侧重也略有差别。</p>
+                           
                                     <button type="button" class="btn btn-success" id="res_overview_toggle"
-                                    style="display: block; margin-left: auto;margin-right: auto;">查看对比</button>
+                                    style="display: block; margin-left: auto;margin-right: auto;">切换</button>
                                     <br>
-                                    <br>
+                                    <p>点击“切换”，查看最适合素食者前往的十大街市。</p>
                                     <!-- JS toggle the chart -->
                                     <script>
                                         $(document).ready(function(){
                                                           $("#res_overview_toggle").click(function(){
                                                             $("#highcharts-0dc63818-cd7b-401e-b822-6273c12f4fa5").slideToggle("slow");
+                                                            $("#highcharts-5zFVAxFA").slideToggle("slow");
                                                           });
                                                         });
                                     </script>
                                     <!--JS toggle the chart-->
+
+
+                                    <!-- 97所商铺对比 -->  
+                                    <div id="highcharts-5zFVAxFA"><script src="https://cloud.highcharts.com/inject/5zFVAxFA/" defer="defer"></script></div>
+                                    <!-- 97所商铺对比 -->  
           <!-- 十佳商铺图表 -->                           
           <div style="display: none" id="highcharts-0dc63818-cd7b-401e-b822-6273c12f4fa5"></div><script>
             (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/stock/modules/annotations-advanced.js","https://code.highcharts.com/stock/modules/stock-tools.js","https://code.highcharts.com/modules/accessibility.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"最适合素食者前往的十间街市"},"subtitle":{"text":"蔬果商铺总数Top10的公众街市"},"plotOptions":{"series":{"allowPointSelect":true,"states":{"hover":{"color":"#a4edba"},"select":{"color":"#EFFFEF","borderColor":"black","dashStyle":"dot"}},"animation":false}},"exporting":{},"credits":{"text":"cloud.highcharts.com","href":"https://cloud.highcharts.com","enabled":false},"chart":{"polar":false},"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"type":"areaspline","color":"#4caf50","marker":{"enabled":true},"dashStyle":"ShortDash"},{"turboThreshold":0,"_colorIndex":1,"_symbolIndex":0,"type":"areaspline","dashStyle":"ShortDash","color":"#ffd740"},{"turboThreshold":0,"_colorIndex":2,"_symbolIndex":0,"type":"spline","color":"#ff9e80"}],"yAxis":[{"title":{"text":"数目"}}],"annotations":[],"data":{"csv":"\"Name\";\"水果商铺数目\";\"蔬菜商铺数目\";\"蔬果商铺总数\"\n\"保安道街市\";75;136;211\n\"九龍城街市\";23;177;200\n\"荃灣街市\";37;142;179\n\"瑞和街街市\";6;159;165\n\"石湖墟街市\";40;103;143\n\"新墟街市\";20;117;137\n\"大成街街市\";40;89;129\n\"楊屋道街市\";34;79;113\n\"士美非路街市\";40;72;112\n\"北河街街市\";31;81;112","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false,"seriesMapping":[{"x":0,"y":2},{"x":0,"y":1},{"x":0,"y":3}]},"stockTools":{"gui":{"buttons":["simpleShapes","lines","crookedLines"],"enabled":false}},"navigation":{"events":{"showPopup":"function(e){this.chart.indicatorsPopupContainer||(this.chart.indicatorsPopupContainer=document.getElementsByClassName(\"highcharts-popup-indicators\")[0]),this.chart.annotationsPopupContainer||(this.chart.annotationsPopupContainer=document.getElementsByClassName(\"highcharts-popup-annotations\")[0]),\"indicators\"===e.formType?this.chart.indicatorsPopupContainer.style.display=\"block\":\"annotation-toolbar\"===e.formType&&(this.chart.activeButton||(this.chart.currentAnnotation=e.annotation,this.chart.annotationsPopupContainer.style.display=\"block\")),this.popup&&(c=this.popup)}","closePopup":"function(){this.chart.annotationsPopupContainer.style.display=\"none\",this.chart.currentAnnotation=null}","selectButton":"function(e){var t=e.button.className+\" highcharts-active\";e.button.classList.contains(\"highcharts-active\")||(e.button.className=t,this.chart.activeButton=e.button)}","deselectButton":"function(e){e.button.classList.remove(\"highcharts-active\"),this.chart.activeButton=null}"},"bindingsClassName":"tools-container"}};/*
@@ -118,15 +125,35 @@
             });
             */new Highcharts.Chart("highcharts-0dc63818-cd7b-401e-b822-6273c12f4fa5", options);}}})();
             </script>
- <!-- 十佳商铺图表 -->
- <iframe class="airtable-embed" src="https://airtable.com/embed/shrGUJ1JOhBGDTlyG?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ <!-- #十佳商铺图表 -->
+
+ <!-- 97所商铺airtble -->
+<br>
+<br><br>
+<button type="button" class="btn btn-success" id="offline_airtable1_toggle"
+style="display: block; margin-left: auto;margin-right: auto;">查看详情</button><br>
+<p>点击“查看详情”，获取香港19个辖区内所有公众街市的详细信息。</p>
+<!-- JS toggle the airtable -->
+<script>
+        $(document).ready(function(){
+                          $("#offline_airtable1_toggle").click(function(){
+                            $("#airtable_mkt").slideToggle("slow");
+                          });
+                        });
+    </script>
+    <!--JS toggle the airtable-->
+ <iframe id="airtable_mkt" style="display: none;" class="airtable-embed" src="https://airtable.com/embed/shrGUJ1JOhBGDTlyG?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ <!-- #97所商铺airtble -->
 
                         </header>
                     </div>
                 </section>
-                <!-- #街市推荐 -->
+               <!--==========================#街市推荐============================-->
             </div>
         </section>
+
+
+
         <!--==========================F ooter============================-->
         <footer id="footer">
             <div class="footer-top">
