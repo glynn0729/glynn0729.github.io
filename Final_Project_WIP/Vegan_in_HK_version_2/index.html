@@ -149,8 +149,8 @@
                 <div class="container">
                     <header class="section-header">
                         <h3>概览</h3>
-                        <p>Vegan in HK 为您提供在香港寻找素食的指南以及线下活动资讯。</p>
-                        <p>特别地，本站将推荐25个纯素食餐厅，97个食环署辖下公众街市以及6个出售纯素产品的网站。</p>
+                        <p>Vegan in HK 为您提供在香港寻找素食的指南。</p>
+                        <p>本站将推荐25个本地纯素食餐厅，97个食环署辖下公众街市以及6个可以购买到素食的网站。</p>
                     </header>
                     <div class="row counters">
                         <div class="col-lg-4 col-6 text-center">
@@ -184,35 +184,35 @@
                         <!-- 专题纵览数据透视图表 -->
                         <script>
                             $(document).ready(function(){
-                                              $("#res_overview_toggle").click(function(){
-                                                $("#highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae").slideToggle("slow");
-                                              });
-                                            });
+                                                                              $("#res_overview_toggle").click(function(){
+                                                                                $("#highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae").slideToggle("slow");
+                                                                              });
+                                                                            });
                         </script>
                         <!--JS toggle the chart-->
                         <div style="display:none" id="highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae"></div>
                         <script>
                             (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/stock/modules/annotations-advanced.js","https://code.highcharts.com/stock/modules/stock-tools.js","https://code.highcharts.com/modules/accessibility.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"消费-口碑对比"},"subtitle":{"text":"精选素食餐厅 · 六大专题纵览"},"plotOptions":{"series":{"allowPointSelect":true,"states":{"hover":{"color":"#a4edba"},"select":{"color":"#EFFFEF","borderColor":"black","dashStyle":"dot"}},"dataLabels":{"enabled":true},"animation":false}},"exporting":{},"credits":{"text":"","href":"","enabled":false},"chart":{"polar":false},"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"type":"spline","color":"#8bc34a","marker":{"symbol":"circle"},"dashStyle":"ShortDash","colorByPoint":false},{"turboThreshold":0,"_colorIndex":1,"_symbolIndex":0,"type":"column","color":"#ffccbc","colorByPoint":false,"negativeColor":"#ffebee"}],"yAxis":[{"title":{"text":""}}],"xAxis":[{"type":"category"}],"annotations":[],"data":{"csv":"\"Name\";\"人均花费(HKD)\";\"好评率(%)\"\n\"都市\";166;79.16\n\"海岛\";126;67.26\n\"禅寺\";146;68.49\n\"中餐厅\";190;70.59\n\"多国菜\";150;73.05\n\"素食甜品\";120;82.48","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false,"seriesMapping":[{"x":0,"y":1},{"x":0,"y":2}]},"tooltip":{"enabled":true,"shared":false},"stockTools":{"gui":{"buttons":["simpleShapes","lines","crookedLines"],"enabled":false}},"navigation":{"events":{"showPopup":"function(e){this.chart.indicatorsPopupContainer||(this.chart.indicatorsPopupContainer=document.getElementsByClassName(\"highcharts-popup-indicators\")[0]),this.chart.annotationsPopupContainer||(this.chart.annotationsPopupContainer=document.getElementsByClassName(\"highcharts-popup-annotations\")[0]),\"indicators\"===e.formType?this.chart.indicatorsPopupContainer.style.display=\"block\":\"annotation-toolbar\"===e.formType&&(this.chart.activeButton||(this.chart.currentAnnotation=e.annotation,this.chart.annotationsPopupContainer.style.display=\"block\")),this.popup&&(c=this.popup)}","closePopup":"function(){this.chart.annotationsPopupContainer.style.display=\"none\",this.chart.currentAnnotation=null}","selectButton":"function(e){var t=e.button.className+\" highcharts-active\";e.button.classList.contains(\"highcharts-active\")||(e.button.className=t,this.chart.activeButton=e.button)}","deselectButton":"function(e){e.button.classList.remove(\"highcharts-active\"),this.chart.activeButton=null}"},"bindingsClassName":"tools-container"}};/*
-                                            // Sample of extending options:
-                                            Highcharts.merge(true, options, {
-                                                chart: {
-                                                    backgroundColor: "#bada55"
-                                                },
-                                                plotOptions: {
-                                                    series: {
-                                                        cursor: "pointer",
-                                                        events: {
-                                                            click: function(event) {
-                                                                alert(this.name + " clicked\n" +
-                                                                      "Alt: " + event.altKey + "\n" +
-                                                                      "Control: " + event.ctrlKey + "\n" +
-                                                                      "Shift: " + event.shiftKey + "\n");
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            });
-                                            */new Highcharts.Chart("highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae", options);}}})();
+                                                                            // Sample of extending options:
+                                                                            Highcharts.merge(true, options, {
+                                                                                chart: {
+                                                                                    backgroundColor: "#bada55"
+                                                                                },
+                                                                                plotOptions: {
+                                                                                    series: {
+                                                                                        cursor: "pointer",
+                                                                                        events: {
+                                                                                            click: function(event) {
+                                                                                                alert(this.name + " clicked\n" +
+                                                                                                      "Alt: " + event.altKey + "\n" +
+                                                                                                      "Control: " + event.ctrlKey + "\n" +
+                                                                                                      "Shift: " + event.shiftKey + "\n");
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            });
+                                                                            */new Highcharts.Chart("highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae", options);}}})();
                         </script>
                         <!-- 专题纵览数据透视图表 -->
                     </header>
@@ -325,20 +325,20 @@
                         <div class="col-md-6 wow fadeInUp">
                             <div class="about-col">
                                 <div class="img">
-                                    <a herf="" href="make_dish_recipes.html"><img src="img/homepage/homepage_tutorial.jpg" alt="" class="img-fluid"></a>
-                                    <a herf="" href="make_dish_recipes.html"></a>
+                                    <a href="buy_offline.html"><img src="img/buy/buy_offline_index.jpg" alt="" class="img-fluid"></a>
+                                    <a href="buy_offline.html"></a>
                                 </div>
-                                <a herf="" href="make_dish_recipes.html"><h2 class="title">线下购买</h2></a>
+                                <a href="buy_offline.html"><h2 class="title">线下购买</h2></a>
                                 <p class="text-center">在香港最传统的公众街市购买蔬果。</p>
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="about-col">
                                 <div class="img">
-                                    <a href="make_dish_mkt.html"><img src="img/homepage/homepage_street_mkt.jpg" alt="" class="img-fluid"></a>
-                                    <a href="make_dish_mkt.html"></a>
+                                    <a href="buy_online.html"><img src="img/buy/buy_online_index.jpg" alt="" class="img-fluid"></a>
+                                    <a href="buy_online.html"></a>
                                 </div>
-                                <a href="make_dish_mkt.html"><h2 class="title">线上购买</h2></a>
+                                <a href="buy_online.html"><h2 class="title">线上购买</h2></a>
                                 <p class="text-center">足不出户也可购得心水商品。</p>
                             </div>
                         </div>
@@ -352,7 +352,7 @@
                 <div class="container">
                     <header class="section-header">
                         <h3>素食料理教学</h3>
-                        <p>您可以点击简单小食/精致料理进行分类筛选，观看视频学习如何制作素食料理。</p>
+                        <p>您可以点击简单小食/精致料理进行分类筛选，学习如何制作素食料理。</p>
                     </header>
                     <div class="row">
                         <div class="col-lg-12">
@@ -363,146 +363,150 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row portfolio-container">
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
-                        data-wow-delay="0.2s">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe src="https://www.youtube.com/embed/UGmLDsgjFl0"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">5 Lazy Healthy Recipes</a>
-                                    </h4>
-                                    <p>简单小食</p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row portfolio-container">
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                                data-wow-delay="0.2s">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe src="https://www.youtube.com/embed/UGmLDsgjFl0" frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">5 Lazy Healthy Recipes</a>
+                                            </h4>
+                                            <p>简单小食</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
-                        data-wow-delay="0.2s">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/DtZ1EjV0EEw"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">Quick Breakfast Ideas</a>
-                                    </h4>
-                                    <p>简单小食</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                                data-wow-delay="0.2s">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/DtZ1EjV0EEw"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">Quick Breakfast Ideas</a>
+                                            </h4>
+                                            <p>简单小食</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
-                        data-wow-delay="0.2s">
-                            <div class="portfolio-wrap">    
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/VhtwsPLByLw"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">5 Easy Yummy Recipes</a>
-                                    </h4>
-                                    <p>简单小食</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                                data-wow-delay="0.2s">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/VhtwsPLByLw"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">5 Easy Yummy Recipes</a>
+                                            </h4>
+                                            <p>简单小食</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/daMi8AdSRY0"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">Vegan Thai Red Curry Recipe</a>
-                                    </h4>
-                                    <p>精致料理</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/daMi8AdSRY0"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">Vegan Thai Red Curry Recipe</a>
+                                            </h4>
+                                            <p>精致料理</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/ob2CYmTx9PM"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">Spicy Braised Tofu</a>
-                                    </h4>
-                                    <p>精致料理</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/ob2CYmTx9PM"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">Spicy Braised Tofu</a>
+                                            </h4>
+                                            <p>精致料理</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
-                        data-wow-delay="0.1s">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/0Cjj8JoTzEQ"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">Italian Cuisine Online Course</a>
-                                    </h4>
-                                    <p>精致料理</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
+                                data-wow-delay="0.1s">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/0Cjj8JoTzEQ"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">Italian Cuisine Online Course</a>
+                                            </h4>
+                                            <p>精致料理</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
-                        data-wow-delay="0.2s">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/3AUo5zja1-0"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">Easy vegan recipes</a>
-                                    </h4>
-                                    <p>简单小食</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                                data-wow-delay="0.2s">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/3AUo5zja1-0"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">Easy vegan recipes</a>
+                                            </h4>
+                                            <p>简单小食</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
-                        data-wow-delay="0.1s">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/ydZedLblpFY"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">Easy Healthy Snack Ideas</a>
-                                    </h4>
-                                    <p>精致料理</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                                data-wow-delay="0.1s">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/ydZedLblpFY"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">Easy Healthy Snack Ideas</a>
+                                            </h4>
+                                            <p>精致料理</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
-                        data-wow-delay="0.1s">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                    <iframe width="340" height="240" src="https://www.youtube.com/embed/xPjL4zURu5c"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="" alt=""></iframe>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="#">Tuscan Bean Soup Recipe</a>
-                                    </h4>
-                                    <p>精致料理</p>
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
+                                data-wow-delay="0.1s">
+                                    <div class="portfolio-wrap">
+                                        <figure>
+                                            <iframe width="340" height="240" src="https://www.youtube.com/embed/xPjL4zURu5c"
+                                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen="" alt=""></iframe>
+                                        </figure>
+                                        <div class="portfolio-info">
+                                            <h4>
+                                                <a href="#">Tuscan Bean Soup Recipe</a>
+                                            </h4>
+                                            <p>精致料理</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -601,11 +605,11 @@
                                 </li>
                                 <li>
                                     <i class="ion-ios-arrow-right"></i>&nbsp;
-                                    <a href="#make_at_home">素食 DIY</a>
+                                    <a href="#buy">素食购买</a>
                                 </li>
                                 <li>
                                     <i class="ion-ios-arrow-right"></i>&nbsp;
-                                    <a href="#vegan_news">素食资讯</a>
+                                    <a href="#make_dish">素食料理教学</a>
                                 </li>
                                 <li>
                                     <i class="ion-ios-arrow-right"></i>&nbsp;
