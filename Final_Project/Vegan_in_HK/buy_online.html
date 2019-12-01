@@ -2,22 +2,24 @@
 <html>
     
     <head>
-         <!-- Google Tag Manager -->
-         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-53HLDB7');</script>
-                <!-- #End Google Tag Manager -->
-         <!-- Global site tag (gtag.js) - Google Analytics -->
-         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151436387-1"></script>
-         <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-         gtag('config', 'UA-151436387-1', { 'optimize_id': 'GTM-TS5SRBC'});
-         </script>
-       <!-- #Global site tag (gtag.js) - Google Analytics -->
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                            })(window,document,'script','dataLayer','GTM-53HLDB7');
+        </script>
+        <!-- #End Google Tag Manager -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-151436387-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+             gtag('config', 'UA-151436387-1', { 'optimize_id': 'GTM-TS5SRBC'});
+        </script>
+        <!-- #Global site tag (gtag.js) - Google Analytics -->
         <meta charset="utf-8">
         <title>Vegan in HK</title>
         <meta content="width=device-width, initial-scale=1.0"
@@ -40,19 +42,9 @@
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <!-- Main Stylesheet File -->
         <link href="css/style.css" rel="stylesheet">
-        <!-- JS Map -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
-        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
-</script>
-        <!-- barchart lib -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
-        <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css"
-        rel="stylesheet" type="text/css">
+        <!-- Toggle File -->
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  
+
         <!--=======================================================T heme Name:
         BizPage Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
         Author: BootstrapMade.com License: https://bootstrapmade.com/license/=======================================================-
@@ -64,8 +56,10 @@
     
     <body>
         <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53HLDB7"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53HLDB7"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
         <!-- #End Google Tag Manager (noscript) -->
         <header id="header">
             <div class="container-fluid">
@@ -105,103 +99,145 @@
                 <!--==========================线上素食购买 · 网上商城============================-->
                 <section style="background-color:rgba(110, 110, 110, 0.295);" id="portfolio"
                 class="section-bg">
-                        <div class="container">
-                            <header class="section-header">
-                                <h3>线上素食购买 · 网上商城</h3>
-                                <p>点击进入您感兴趣的网上商城，选购蔬果或其他纯素商品。</p>
-                            </header>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <ul id="portfolio-flters">
-                                <li data-filter="*" class="filter-active">所有网站</li>
-                                <li data-filter=".filter-app">综合性超市官网</li>
-                                <li data-filter=".filter-card">纯素商品专卖店</li>
-                            </ul>
+                    <div class="container">
+                        <header class="section-header">
+                            <h3>线上素食购买 · 网上商城</h3>
+                            <p>点击进入您感兴趣的网上商城，选购蔬果或其他纯素商品。</p>
+                            <button type="button" class="btn btn-success" id="res_overview_toggle"
+                                    style="display: block; margin-left: auto;margin-right: auto;">对比</button>
+                                    <br>
+                                    <p>点击“对比”，查看各网站的配送费收取情况。</p>
+                                    <!-- JS toggle the chart -->
+                                    <script>
+                                        $(document).ready(function(){
+                                                          $("#res_overview_toggle").click(function(){
+                                                            $("#highcharts-569ed7f9-9c23-42ed-bae8-8980440dcbb1").slideToggle("slow");
+                                                            
+                                                          });
+                                                        });
+                                    </script>
+                                    <!--JS toggle the chart-->
+
+
+                                    <!-- 运费对比表 -->  
+
+                                    <div style="display:none;" id="highcharts-569ed7f9-9c23-42ed-bae8-8980440dcbb1"></div><script>
+                                        (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/stock/modules/annotations-advanced.js","https://code.highcharts.com/stock/modules/stock-tools.js","https://code.highcharts.com/modules/accessibility.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"配送费对比"},"subtitle":{"text":"线上素食购买 · 网上商城"},"plotOptions":{"series":{"allowPointSelect":true,"states":{"hover":{"color":"#a4edba"},"select":{"color":"#EFFFEF","borderColor":"black","dashStyle":"dot"}},"dataLabels":{"enabled":true},"animation":false}},"exporting":{},"credits":{"text":"","href":"","enabled":false},"chart":{"polar":false},"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"type":"spline","color":"#8bc34a","dashStyle":"ShortDash"},{"turboThreshold":0,"_colorIndex":1,"_symbolIndex":0,"type":"column","negativeColor":"#d1c4e9","color":"#ffccbc"}],"yAxis":[{"title":{"text":""}}],"annotations":[],"data":{"csv":"\"Name\";\"配送费（HKD）\";\"满 x HKD免运费配送费\"\n\"惠康 wellcome\";30;500\n\"百佳超级市场\";30;500\n\"HKTV mall\";80;400\n\"VEGAN CONCEPT\";50;300\n\"甘薯葉 Batata Greens\";150;500","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false,"seriesMapping":[{"x":0,"y":2},{"x":0,"y":1}]},"tooltip":{"valueSuffix":""},"caption":{"text":"* the vege lab 配送费依据不同货品而定，为60-300HKD不等。"},"stockTools":{"gui":{"buttons":["simpleShapes","lines","crookedLines"],"enabled":false}},"navigation":{"events":{"showPopup":"function(e){this.chart.indicatorsPopupContainer||(this.chart.indicatorsPopupContainer=document.getElementsByClassName(\"highcharts-popup-indicators\")[0]),this.chart.annotationsPopupContainer||(this.chart.annotationsPopupContainer=document.getElementsByClassName(\"highcharts-popup-annotations\")[0]),\"indicators\"===e.formType?this.chart.indicatorsPopupContainer.style.display=\"block\":\"annotation-toolbar\"===e.formType&&(this.chart.activeButton||(this.chart.currentAnnotation=e.annotation,this.chart.annotationsPopupContainer.style.display=\"block\")),this.popup&&(c=this.popup)}","closePopup":"function(){this.chart.annotationsPopupContainer.style.display=\"none\",this.chart.currentAnnotation=null}","selectButton":"function(e){var t=e.button.className+\" highcharts-active\";e.button.classList.contains(\"highcharts-active\")||(e.button.className=t,this.chart.activeButton=e.button)}","deselectButton":"function(e){e.button.classList.remove(\"highcharts-active\"),this.chart.activeButton=null}"},"bindingsClassName":"tools-container"}};/*
+                                        // Sample of extending options:
+                                        Highcharts.merge(true, options, {
+                                            chart: {
+                                                backgroundColor: "#bada55"
+                                            },
+                                            plotOptions: {
+                                                series: {
+                                                    cursor: "pointer",
+                                                    events: {
+                                                        click: function(event) {
+                                                            alert(this.name + " clicked\n" +
+                                                                  "Alt: " + event.altKey + "\n" +
+                                                                  "Control: " + event.ctrlKey + "\n" +
+                                                                  "Shift: " + event.shiftKey + "\n");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        });
+                                        */new Highcharts.Chart("highcharts-569ed7f9-9c23-42ed-bae8-8980440dcbb1", options);}}})();
+                                        </script>                                    <!-- #运费对比表 -->  
+                        </header>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul id="portfolio-flters">
+                                    <li data-filter="*" class="filter-active">所有网站</li>
+                                    <li data-filter=".filter-app">综合性超市官网</li>
+                                    <li data-filter=".filter-card">纯素商品专卖店</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row portfolio-container">
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-                            <div class="portfolio-wrap">
-                                <figure>
+                        <div class="row portfolio-container">
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                                <div class="portfolio-wrap">
+                                    <figure>
                                         <a href="https://www.wellcome.com.hk/wd2shop/zh/html/index.html"><img src="img/buy/online_wellcome.jpg" class="img-fluid" alt=""></a>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="https://www.wellcome.com.hk/wd2shop/zh/html/index.html">惠康 Wellcome</a>
-                                    </h4>
-                                    <p>香港最大型的连锁超市官网</p>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4>
+                                            <a href="https://www.wellcome.com.hk/wd2shop/zh/html/index.html">惠康 Wellcome</a>
+                                        </h4>
+                                        <p>香港最大型的连锁超市官网</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
-                        data-wow-delay="0.2s">
-                            <div class="portfolio-wrap">
-                                <figure>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                            data-wow-delay="0.2s">
+                                <div class="portfolio-wrap">
+                                    <figure>
                                         <a href="https://www.parknshop.com/zh-hk/?gclid=CjwKCAiA_f3uBRAmEiwAzPuaM7cLcMccu1oS6BtBZ9qfD4G-Xez1YkuAzA8sttSLUa5WLr1w5expSxoCf1kQAvD_BwE"><img src="img/buy/online_parkn.jpg" class="img-fluid" alt=""></a>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="https://www.parknshop.com/zh-hk/?gclid=CjwKCAiA_f3uBRAmEiwAzPuaM7cLcMccu1oS6BtBZ9qfD4G-Xez1YkuAzA8sttSLUa5WLr1w5expSxoCf1kQAvD_BwE">百佳超级市场</a>
-                                    </h4>
-                                    <p>屈臣氏旗下连锁超市官网</p>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4>
+                                            <a href="https://www.parknshop.com/zh-hk/?gclid=CjwKCAiA_f3uBRAmEiwAzPuaM7cLcMccu1oS6BtBZ9qfD4G-Xez1YkuAzA8sttSLUa5WLr1w5expSxoCf1kQAvD_BwE">百佳超级市场</a>
+                                        </h4>
+                                        <p>屈臣氏旗下连锁超市官网</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                        <a href="https://omnipork.co/zh/home/"><img src="img/buy/online_pork.jpg" class="img-fluid" alt=""></a>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="https://omnipork.co/zh/home/">新猪肉Ominipork</a>
-                                    </h4>
-                                    <p>全植物性材料制成的素食新品</p>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <a href="https://www.zh.theveganconcept.com/"><img src="img/buy/VEGAN_CONCEPT.jpg" class="img-fluid" alt=""></a>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4>
+                                            <a href="https://www.zh.theveganconcept.com/">VEGAN CONCEPT</a>
+                                        </h4>
+                                        <p>全港首家纯素概念店</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
-                        data-wow-delay="0.2s">
-                            <div class="portfolio-wrap">
-                                <figure>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+                            data-wow-delay="0.2s">
+                                <div class="portfolio-wrap">
+                                    <figure>
                                         <a href="https://www.hktvmall.com/"><img src="img/buy/online_tvmall.jpg" class="img-fluid" alt=""></a>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="https://www.hktvmall.com/">HKTV mall</a>
-                                    </h4>
-                                    <p>与2800间商户合作的网站</p>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4>
+                                            <a href="https://www.hktvmall.com/">HKTV mall</a>
+                                        </h4>
+                                        <p>与2800间商户合作的网站</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-                            <div class="portfolio-wrap">
-                                <figure>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                                <div class="portfolio-wrap">
+                                    <figure>
                                         <a href="https://batatagreens.com.hk/"><img src="img/buy/online_batta.jpg" class="img-fluid" alt=""></a>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="https://batatagreens.com.hk/">甘薯葉Batata Greens</a>
-                                    </h4>
-                                    <p>素食超市专门页</p>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4>
+                                            <a href="https://batatagreens.com.hk/">甘薯葉Batata Greens</a>
+                                        </h4>
+                                        <p>素食超市专门页</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
-                        data-wow-delay="0.1s">
-                            <div class="portfolio-wrap">
-                                <figure>
-                                        <a href="https://thevegelab.com/"><img src="img/buy/online_thevegelab.png" class="img-fluid" alt=""></a>
-                                </figure>
-                                <div class="portfolio-info">
-                                    <h4>
-                                        <a href="https://thevegelab.com/">the vege lab</a>
-                                    </h4>
-                                    <p>只接受网络预订+线下取货的纯素甜品</p>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
+                            data-wow-delay="0.1s">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <a href="https://thevegelab.com/"><img src="img/buy/online_thevegelab.jpeg" class="img-fluid" alt=""></a>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4>
+                                            <a href="https://thevegelab.com/">the vege lab</a>
+                                        </h4>
+                                        <p>只接受网络预订+线下取货的纯素甜品</p>
+                                    </div>
                                 </div>
                             </div>
+                            <!------------------#线上素食购买 · 网上商城------------->
                         </div>
-                        <!------------------#线上素食购买 · 网上商城------------->
                     </div>
                 </section>
             </div>
@@ -252,18 +288,15 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 footer-contact">
-                                <h4>声明
-                                    </h4>
-                                <p>This Website is created by Glynn Lu
-                                     as the coursework of COMM5961 in CUHK.</p>
-                                
+                            <h4>声明</h4>
+                            <p>This Website is created by Glynn Lu as the coursework of COMM5961 in CUHK.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="copyright">© Copyright
-                    <strong>Vegan in HK</strong> All Rights Reserved</div>
+                    <strong>Vegan in HK</strong>All Rights Reserved</div>
                 <div class="credits">
                     <!-- All the links in the footer should remain intact. You can delete
                     the links only if you purchased the pro version. Licensing information:
