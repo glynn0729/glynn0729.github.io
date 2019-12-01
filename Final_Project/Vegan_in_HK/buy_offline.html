@@ -100,14 +100,14 @@
                             <h3>线下素食购买 · 公众街市</h3>
                             <p>街市是香港本土文化的一部分，内设各式商铺，售卖新鲜粮食与日用品。不同街市的贩售侧重也略有差别。</p>
                            
-                                    <button type="button" class="btn btn-success" id="res_overview_toggle"
+                                    <button type="button" class="btn btn-success" id="buy_offline_switch"
                                     style="display: block; margin-left: auto;margin-right: auto;">切换</button>
                                     <br>
                                     <p>浏览图表，查看各街市内水果与蔬菜商铺的数量。或点击“切换”，获取最适合素食者前往的十大街市。</p>
                                     <!-- JS toggle the chart -->
                                     <script>
                                         $(document).ready(function(){
-                                                          $("#res_overview_toggle").click(function(){
+                                                          $("#buy_offline_switch").click(function(){
                                                             $("#highcharts-0dc63818-cd7b-401e-b822-6273c12f4fa5").slideToggle("slow");
                                                             $("#highcharts-5zFVAxFA").slideToggle("slow");
                                                           });
@@ -148,13 +148,13 @@
  <!-- 97所商铺airtble -->
 <br>
 <br><br>
-<button type="button" class="btn btn-success" id="offline_airtable1_toggle"
+<button type="button" class="btn btn-success" id="buy_offline_detail"
 style="display: block; margin-left: auto;margin-right: auto;">查看详情</button><br>
 <p>点击“查看详情”，获取香港19个辖区内所有公众街市的详细信息。</p>
 <!-- JS toggle the airtable -->
 <script>
         $(document).ready(function(){
-                          $("#offline_airtable1_toggle").click(function(){
+                          $("#buy_offline_detail").click(function(){
                             $("#airtable_mkt").slideToggle("slow");
                           });
                         });
