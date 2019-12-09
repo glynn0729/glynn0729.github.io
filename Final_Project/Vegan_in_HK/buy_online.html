@@ -2,13 +2,15 @@
 <html>
     
     <head>
-        <!-- Google Tag Manager -->  
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-53BGL4D');</script>
-                <!-- #End Google Tag Manager -->
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                            })(window,document,'script','dataLayer','GTM-53BGL4D');
+        </script>
+        <!-- #End Google Tag Manager -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-151436387-1"></script>
         <script>
@@ -41,10 +43,9 @@
         <!-- Main Stylesheet File -->
         <link href="css/style.css" rel="stylesheet">
         <!-- Toggle File -->
-        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  
-
-        <!--=======================================================T heme Name:
-        BizPage Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <!--=======================================================T
+        heme Name: BizPage Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
         Author: BootstrapMade.com License: https://bootstrapmade.com/license/=======================================================-
         ->
 </head>
@@ -53,10 +54,12 @@
     </head>
     
     <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53BGL4D"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53BGL4D"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <header id="header">
             <div class="container-fluid">
                 <div id="logo" class="pull-left">
@@ -99,26 +102,24 @@
                         <header class="section-header">
                             <h3>线上素食购买 · 网上商城</h3>
                             <p>点击进入您感兴趣的网上商城，选购蔬果或其他纯素商品。</p>
-                            <button type="button" class="btn btn-success" id="buy_online_compare"
-                                    style="display: block; margin-left: auto;margin-right: auto;">对比网站</button>
-                                    <br>
-                                    <p>点击“对比网站”，查看配送费收取情况。</p>
-                                    <!-- JS toggle the chart -->
-                                    <script>
-                                        $(document).ready(function(){
+                            <button type="button" class="btn btn-warning"
+                            id="buy_online_compare" style="display: block; margin-left: auto;margin-right: auto;">对比网站</button>
+                            <br>
+                            <p>点击“对比网站”，查看配送费收取情况。</p>
+                            <!-- JS toggle the chart -->
+                            <script>
+                                $(document).ready(function(){
                                                           $("#buy_online_compare").click(function(){
                                                             $("#highcharts-569ed7f9-9c23-42ed-bae8-8980440dcbb1").slideToggle("slow");
                                                             
                                                           });
                                                         });
-                                    </script>
-                                    <!--JS toggle the chart-->
-
-
-                                    <!-- 运费对比表 -->  
-
-                                    <div style="display:none;" id="highcharts-569ed7f9-9c23-42ed-bae8-8980440dcbb1"></div><script>
-                                        (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/stock/modules/annotations-advanced.js","https://code.highcharts.com/stock/modules/stock-tools.js","https://code.highcharts.com/modules/accessibility.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"配送费对比"},"subtitle":{"text":"线上素食购买 · 网上商城"},"plotOptions":{"series":{"allowPointSelect":true,"states":{"hover":{"color":"#a4edba"},"select":{"color":"#EFFFEF","borderColor":"black","dashStyle":"dot"}},"dataLabels":{"enabled":true},"animation":false}},"exporting":{},"credits":{"text":"","href":"","enabled":false},"chart":{"polar":false},"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"type":"spline","color":"#8bc34a","dashStyle":"ShortDash"},{"turboThreshold":0,"_colorIndex":1,"_symbolIndex":0,"type":"column","negativeColor":"#d1c4e9","color":"#ffccbc"}],"yAxis":[{"title":{"text":""}}],"annotations":[],"data":{"csv":"\"Name\";\"配送费（HKD）\";\"满 x HKD免运费配送费\"\n\"惠康 wellcome\";30;500\n\"百佳超级市场\";30;500\n\"HKTV mall\";80;400\n\"VEGAN CONCEPT\";50;300\n\"甘薯葉 Batata Greens\";150;500","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false,"seriesMapping":[{"x":0,"y":2},{"x":0,"y":1}]},"tooltip":{"valueSuffix":""},"caption":{"text":"* the vege lab 配送费依据不同货品而定，为60-300HKD不等。"},"stockTools":{"gui":{"buttons":["simpleShapes","lines","crookedLines"],"enabled":false}},"navigation":{"events":{"showPopup":"function(e){this.chart.indicatorsPopupContainer||(this.chart.indicatorsPopupContainer=document.getElementsByClassName(\"highcharts-popup-indicators\")[0]),this.chart.annotationsPopupContainer||(this.chart.annotationsPopupContainer=document.getElementsByClassName(\"highcharts-popup-annotations\")[0]),\"indicators\"===e.formType?this.chart.indicatorsPopupContainer.style.display=\"block\":\"annotation-toolbar\"===e.formType&&(this.chart.activeButton||(this.chart.currentAnnotation=e.annotation,this.chart.annotationsPopupContainer.style.display=\"block\")),this.popup&&(c=this.popup)}","closePopup":"function(){this.chart.annotationsPopupContainer.style.display=\"none\",this.chart.currentAnnotation=null}","selectButton":"function(e){var t=e.button.className+\" highcharts-active\";e.button.classList.contains(\"highcharts-active\")||(e.button.className=t,this.chart.activeButton=e.button)}","deselectButton":"function(e){e.button.classList.remove(\"highcharts-active\"),this.chart.activeButton=null}"},"bindingsClassName":"tools-container"}};/*
+                            </script>
+                            <!--JS toggle the chart-->
+                            <!-- 运费对比表 -->
+                            <div style="display:none;" id="highcharts-569ed7f9-9c23-42ed-bae8-8980440dcbb1"></div>
+                            <script>
+                                (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/stock/modules/annotations-advanced.js","https://code.highcharts.com/stock/modules/stock-tools.js","https://code.highcharts.com/modules/accessibility.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"配送费对比"},"subtitle":{"text":"线上素食购买 · 网上商城"},"plotOptions":{"series":{"allowPointSelect":true,"states":{"hover":{"color":"#a4edba"},"select":{"color":"#EFFFEF","borderColor":"black","dashStyle":"dot"}},"dataLabels":{"enabled":true},"animation":false}},"exporting":{},"credits":{"text":"","href":"","enabled":false},"chart":{"polar":false},"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"type":"spline","color":"#8bc34a","dashStyle":"ShortDash"},{"turboThreshold":0,"_colorIndex":1,"_symbolIndex":0,"type":"column","negativeColor":"#d1c4e9","color":"#ffccbc"}],"yAxis":[{"title":{"text":""}}],"annotations":[],"data":{"csv":"\"Name\";\"配送费（HKD）\";\"满 x HKD免运费配送费\"\n\"惠康 wellcome\";30;500\n\"百佳超级市场\";30;500\n\"HKTV mall\";80;400\n\"VEGAN CONCEPT\";50;300\n\"甘薯葉 Batata Greens\";150;500","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false,"seriesMapping":[{"x":0,"y":2},{"x":0,"y":1}]},"tooltip":{"valueSuffix":""},"caption":{"text":"* the vege lab 配送费依据不同货品而定，为60-300HKD不等。"},"stockTools":{"gui":{"buttons":["simpleShapes","lines","crookedLines"],"enabled":false}},"navigation":{"events":{"showPopup":"function(e){this.chart.indicatorsPopupContainer||(this.chart.indicatorsPopupContainer=document.getElementsByClassName(\"highcharts-popup-indicators\")[0]),this.chart.annotationsPopupContainer||(this.chart.annotationsPopupContainer=document.getElementsByClassName(\"highcharts-popup-annotations\")[0]),\"indicators\"===e.formType?this.chart.indicatorsPopupContainer.style.display=\"block\":\"annotation-toolbar\"===e.formType&&(this.chart.activeButton||(this.chart.currentAnnotation=e.annotation,this.chart.annotationsPopupContainer.style.display=\"block\")),this.popup&&(c=this.popup)}","closePopup":"function(){this.chart.annotationsPopupContainer.style.display=\"none\",this.chart.currentAnnotation=null}","selectButton":"function(e){var t=e.button.className+\" highcharts-active\";e.button.classList.contains(\"highcharts-active\")||(e.button.className=t,this.chart.activeButton=e.button)}","deselectButton":"function(e){e.button.classList.remove(\"highcharts-active\"),this.chart.activeButton=null}"},"bindingsClassName":"tools-container"}};/*
                                         // Sample of extending options:
                                         Highcharts.merge(true, options, {
                                             chart: {
@@ -139,7 +140,8 @@
                                             }
                                         });
                                         */new Highcharts.Chart("highcharts-569ed7f9-9c23-42ed-bae8-8980440dcbb1", options);}}})();
-                                        </script>                                    <!-- #运费对比表 -->  
+                            </script>
+                            <!-- #运费对比表 -->
                         </header>
                         <div class="row">
                             <div class="col-lg-12">

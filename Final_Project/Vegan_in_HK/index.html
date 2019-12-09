@@ -2,21 +2,23 @@
 <html>
     
     <head>
-        <!-- Google Tag Manager -->  
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-53BGL4D');</script>
-                <!-- #End Google Tag Manager -->
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                    })(window,document,'script','dataLayer','GTM-53BGL4D');
+        </script>
+        <!-- #End Google Tag Manager -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-151436387-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-                            
-                            gtag('config', 'UA-151436387-1', { 'optimize_id': 'GTM-TS5SRBC'});
+                                    function gtag(){dataLayer.push(arguments);}
+                                    gtag('js', new Date());
+                                    
+                                    gtag('config', 'UA-151436387-1', { 'optimize_id': 'GTM-TS5SRBC'});
         </script>
         <!-- #Global site tag (gtag.js) - Google Analytics -->
         <meta charset="utf-8">
@@ -56,10 +58,12 @@
     </head>
     
     <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53BGL4D"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53BGL4D"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <header id="header">
             <div class="container-fluid">
                 <div id="logo" class="pull-left">
@@ -170,24 +174,24 @@
                 <div class="container">
                     <header class="section-header">
                         <h3>概览</h3>
-                        <p>Vegan in HK 为您提供在香港寻找素食的指南。</p>
-                        <p>本站将推荐25个素食餐厅，97个食环署辖下公众街市，6个可以购买到素食的网站，以及9个素食料理教学视频。</p>
+                        <p>Vegan in HK 为您提供在香港寻找纯素食的指南，希望每个vegan的饮食生活可以变得更精彩。</p>
+                        <p>本站将推荐25个素食餐厅，97个食环署辖下的公众街市，6个可以购买到素食的网站，以及9个素食料理教学视频。</p>
                     </header>
                     <div class="row counters">
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-toggle="counter-up">25</span>
+                            <a href="#restaurants"><span data-toggle="counter-up">25</span></a>
                             <p>素食餐厅</p>
                         </div>
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-toggle="counter-up">97</span>
+                            <a href="buy_offline.html"><span data-toggle="counter-up">97</span></a>
                             <p>公众街市</p>
                         </div>
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-toggle="counter-up">6</span>
+                            <a href="buy_online.html"><span data-toggle="counter-up">6</span></a>
                             <p>网购站点</p>
                         </div>
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-toggle="counter-up">9</span>
+                            <a href="#make_dish"><span data-toggle="counter-up">9</span></a>
                             <p>教学视频</p>
                         </div>
                     </div>
@@ -201,43 +205,44 @@
                     <header class="section-header">
                         <h3>素食餐厅</h3>
                         <br>
-                        <button type="button" class="btn btn-success" id="res_section_compare"
+                        <button type="button" class="btn btn-warning" id="res_section_compare"
                         style="display: block; margin-left: auto;margin-right: auto;">对比专题</button>
                         <br>
                         <br>
-                        <p>点击“对比专题”，了解不同专题的性价比。或点击“就餐场景/料理类别”进行筛选，进入感兴趣的专题。</p>
-                        <!-- 专题纵览数据透视图表 -->
+                        <p>点击“对比专题”，了解不同专题的性价比，获取最实惠的选择。或点击“就餐场景/料理类别”进行筛选，进入感兴趣的专题。</p>
+                        <!-- 专题纵览数据透视图表
+                        -->
                         <script>
                             $(document).ready(function(){
-                                                                                                              $("#res_section_compare").click(function(){
-                                                                                                                $("#highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae").slideToggle("slow");
-                                                                                                              });
-                                                                                                            });
+                                                                                                                              $("#res_section_compare").click(function(){
+                                                                                                                                $("#highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae").slideToggle("slow");
+                                                                                                                              });
+                                                                                                                            });
                         </script>
                         <!--JS toggle the chart-->
                         <div style="display:none" id="highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae"></div>
                         <script>
                             (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/stock/modules/annotations-advanced.js","https://code.highcharts.com/stock/modules/stock-tools.js","https://code.highcharts.com/modules/accessibility.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"消费-口碑对比"},"subtitle":{"text":"精选素食餐厅 · 六大专题纵览"},"plotOptions":{"series":{"allowPointSelect":true,"states":{"hover":{"color":"#a4edba"},"select":{"color":"#EFFFEF","borderColor":"black","dashStyle":"dot"}},"dataLabels":{"enabled":true},"animation":false}},"exporting":{},"credits":{"text":"","href":"","enabled":false},"chart":{"polar":false},"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"type":"spline","color":"#8bc34a","marker":{"symbol":"circle"},"dashStyle":"ShortDash","colorByPoint":false},{"turboThreshold":0,"_colorIndex":1,"_symbolIndex":0,"type":"column","color":"#ffccbc","colorByPoint":false,"negativeColor":"#ffebee"}],"yAxis":[{"title":{"text":""}}],"xAxis":[{"type":"category"}],"annotations":[],"data":{"csv":"\"Name\";\"人均花费(HKD)\";\"好评率(%)\"\n\"都市\";166;79.16\n\"海岛\";126;67.26\n\"禅寺\";146;68.49\n\"中餐厅\";190;70.59\n\"多国菜\";150;73.05\n\"素食甜品\";120;82.48","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false,"seriesMapping":[{"x":0,"y":1},{"x":0,"y":2}]},"tooltip":{"enabled":true,"shared":false},"stockTools":{"gui":{"buttons":["simpleShapes","lines","crookedLines"],"enabled":false}},"navigation":{"events":{"showPopup":"function(e){this.chart.indicatorsPopupContainer||(this.chart.indicatorsPopupContainer=document.getElementsByClassName(\"highcharts-popup-indicators\")[0]),this.chart.annotationsPopupContainer||(this.chart.annotationsPopupContainer=document.getElementsByClassName(\"highcharts-popup-annotations\")[0]),\"indicators\"===e.formType?this.chart.indicatorsPopupContainer.style.display=\"block\":\"annotation-toolbar\"===e.formType&&(this.chart.activeButton||(this.chart.currentAnnotation=e.annotation,this.chart.annotationsPopupContainer.style.display=\"block\")),this.popup&&(c=this.popup)}","closePopup":"function(){this.chart.annotationsPopupContainer.style.display=\"none\",this.chart.currentAnnotation=null}","selectButton":"function(e){var t=e.button.className+\" highcharts-active\";e.button.classList.contains(\"highcharts-active\")||(e.button.className=t,this.chart.activeButton=e.button)}","deselectButton":"function(e){e.button.classList.remove(\"highcharts-active\"),this.chart.activeButton=null}"},"bindingsClassName":"tools-container"}};/*
-                                                                                                            // Sample of extending options:
-                                                                                                            Highcharts.merge(true, options, {
-                                                                                                                chart: {
-                                                                                                                    backgroundColor: "#bada55"
-                                                                                                                },
-                                                                                                                plotOptions: {
-                                                                                                                    series: {
-                                                                                                                        cursor: "pointer",
-                                                                                                                        events: {
-                                                                                                                            click: function(event) {
-                                                                                                                                alert(this.name + " clicked\n" +
-                                                                                                                                      "Alt: " + event.altKey + "\n" +
-                                                                                                                                      "Control: " + event.ctrlKey + "\n" +
-                                                                                                                                      "Shift: " + event.shiftKey + "\n");
-                                                                                                                            }
-                                                                                                                        }
-                                                                                                                    }
-                                                                                                                }
-                                                                                                            });
-                                                                                                            */new Highcharts.Chart("highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae", options);}}})();
+                                                                                                                            // Sample of extending options:
+                                                                                                                            Highcharts.merge(true, options, {
+                                                                                                                                chart: {
+                                                                                                                                    backgroundColor: "#bada55"
+                                                                                                                                },
+                                                                                                                                plotOptions: {
+                                                                                                                                    series: {
+                                                                                                                                        cursor: "pointer",
+                                                                                                                                        events: {
+                                                                                                                                            click: function(event) {
+                                                                                                                                                alert(this.name + " clicked\n" +
+                                                                                                                                                      "Alt: " + event.altKey + "\n" +
+                                                                                                                                                      "Control: " + event.ctrlKey + "\n" +
+                                                                                                                                                      "Shift: " + event.shiftKey + "\n");
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            });
+                                                                                                                            */new Highcharts.Chart("highcharts-9f07cb84-412e-4a10-9d32-8611be01ebae", options);}}})();
                         </script>
                         <!-- 专题纵览数据透视图表 -->
                     </header>
@@ -377,7 +382,7 @@
                 <div class="container">
                     <header class="section-header">
                         <h3>素食料理教学</h3>
-                        <p>点击“简单小食/精致料理”进行分类筛选，学习如何制作素食料理。</p>
+                        <p contenteditable="true">点击“简单小食/精致料理”进行分类筛选，学习如何在家制作纯素食料理。</p>
                     </header>
                     <div class="row">
                         <div class="col-lg-12">
